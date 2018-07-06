@@ -1,0 +1,24 @@
+<resources>
+
+    <string name="app_name">Music Player</string>
+    <string name="back">Back</string>
+    <string name="pause">Pause</string>
+    <string name="play">Play</string>
+    <string name="player">Audio Player</string>
+    <string name="next">Next</string>
+    <string name="open_playlist">Open Playlist</string>
+    <string name="idle">Idle</string>
+    <string name="empty_text">Select song from below to play</string>
+    <string name="player_button">Album Art Screen</string>
+
+    <color name="orange">#ff3d00</color>
+    <color name="white">#ffffff</color>
+    <color name="opaque">#70000000</color>
+
+    <dimen name="button_width">32dp</dimen>
+    <dimen name="small_button_width">28dp</dimen>
+    <dimen name="small_image_art_width">85dp</dimen>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+</resources>

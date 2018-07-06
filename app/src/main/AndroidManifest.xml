@@ -1,0 +1,63 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.Music_Player.audioplayer"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="19"
+        android:targetSdkVersion="25" />
+
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/logo1"
+        android:theme="@style/AppTheme"
+        android:label="Music_Player">
+        <activity
+            android:label="Music_Player"
+            android:name="com.Music_Player.audioplayer.MainActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.Music_Player.audioplayer.SplashActivity"
+
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.Music_Player.audioplayer.AudioPlayerActivity"
+            android:excludeFromRecents="true"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" >
+        </activity>
+
+        <service
+            android:name="com.Music_Player.audioplayer.service.SongService"
+            android:exported="true" 
+            android:enabled="true"/>
+
+        <receiver android:name="com.Music_Player.audioplayer.receiver.NotificationBroadcast" >
+            <intent-filter>
+                <action android:name="com.Music_Player.audioplayer.delete" />
+                <action android:name="com.Music_Player.audioplayer.pause" />
+                <action android:name="com.Music_Player.audioplayer.next" />
+                <action android:name="com.Music_Player.audioplayer.play" />
+                <action android:name="com.Music_Player.audioplayer.previous" />
+                <action android:name="android.intent.action.MEDIA_BUTTON" />
+            </intent-filter>
+        </receiver>
+    </application>
+
+</manifest>
